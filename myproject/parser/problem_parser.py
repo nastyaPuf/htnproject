@@ -69,10 +69,3 @@ def print_parsing(Prob):
     print("goal:")
     for goals in problem.goal:
         print(goals)
-
-print_parsing('/Users/anastasia/Downloads/HTN-Translation-master/examples/robot/problems/pfile_10_10.pddl')
-
-
-
-
-
