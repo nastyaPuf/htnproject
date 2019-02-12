@@ -106,6 +106,3 @@ def ground_everything(dom, prob):
     problem = pp.parse_problem(prob)
     t = ground_task(dom, problem)
     a = ground_action(dom, problem)
-
-
-ground_everything('/Users/anastasia/Downloads/domain_robot.pddl', '/Users/anastasia/Downloads/problem_robot.pddl')
