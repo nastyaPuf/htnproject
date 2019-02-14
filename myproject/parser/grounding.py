@@ -111,6 +111,6 @@ class Grounder:
         t = self.task(dom, problem)
         a = self.action(dom, problem)
 
-gr = Grounder()
-gr.everything('/Users/anastasia/Downloads/htnproject-master/myproject/parser/domain_robot.pddl', '/Users/anastasia/Downloads/htnproject-master/myproject/parser/problem_robot.pddl')
+#gr = Grounder()
+#gr.everything('/Users/anastasia/Downloads/htnproject-master/myproject/parser/domain_robot.pddl', '/Users/anastasia/Downloads/htnproject-master/myproject/parser/problem_robot.pddl')
 
