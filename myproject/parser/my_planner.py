@@ -169,7 +169,6 @@ def Htn_planner(pos_state, neg_state, T, O, M, coun):
             if x.name == name and x.param == param:
                 accomplaction.append(x)
         if len(accomplaction) == 0:
-            print(1)
             return -1
         new_tasks = []
         for ac in accomplaction:
