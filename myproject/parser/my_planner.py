@@ -4,9 +4,9 @@ import problem_parser as pp
 import random
 
 
-Dom = '/Users/anastasia/Downloads/htnproject-master/myproject/parser/domain_robot.pddl'
+Dom = '../domain_robot.pddl'
 
-Prob = '/Users/anastasia/Downloads/htnproject-master/myproject/parser/problem_robot.pddl'
+Prob = '../problem_robot.pddl'
 
 
 par_prob = pp.Parser()
