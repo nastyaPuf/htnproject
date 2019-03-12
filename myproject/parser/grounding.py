@@ -126,9 +126,9 @@ class Grounder:
                 self.effect(x, domain[i].effect)
                 act = GrAction(act_name, answer[j], domain[i].precond, domain[i].effect)
                 all_actions.append(act)
-                print(*act_name, " ", *answer[j])
-                print(*domain[i].precond)
-                print(*domain[i].effect)
+                #print(*act_name, " ", *answer[j])
+                #print(*domain[i].precond)
+                #print(*domain[i].effect)
             answer = []
         return all_actions
 
@@ -150,10 +150,10 @@ class Grounder:
                 all_subtasks = self.subtask(x, domain[i].subtask)
                 act = GrTask(tsk_name, answer[j], domain[i].prec, all_subtasks)
                 all_tasks.append(act)
-                print(*tsk_name, " ", *answer[j])
-                print(*domain[i].prec)
-                for x in all_subtasks:
-                    print(x.name, x.param)
+                #print(*tsk_name, " ", *answer[j])
+                #print(*domain[i].prec)
+                #for x in all_subtasks:
+                #    print(x.name, x.param)
             answer = []
         return all_tasks
 
