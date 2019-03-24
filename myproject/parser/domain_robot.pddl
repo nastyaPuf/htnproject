@@ -93,7 +93,7 @@
 
 (:action pickup
         :parameters (?obj - PACKAGE ?loc - ROOM)
-        :task (pickup ?obj)
+        :task (pickup)
         :precondition (and (armempty) (rloc ?loc) (in ?obj ?loc))
         :effect (and (not (in ?obj ?loc)) (not (armempty)) (holding ?obj))
 )
