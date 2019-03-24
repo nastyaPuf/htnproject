@@ -133,12 +133,12 @@ class Planner:
             if x.name[0] == name:
                 tsktype = 1
         if tsktype == 1:      ##t1 primitive
-            accomplaction = []
+            accomplish = []
             for x in O:
                 if x.name[0] == name and x.param == param:
-                    accomplaction.append(x)
+                    accomplish.append(x)
             applicable = []
-            for ac in accomplaction:
+            for ac in accomplish:
                 pos_pr, neg_pr = self.precond_to_pos_neg(ac.precond)
                 if self.applic(pos_pr, neg_pr, pos_state, neg_state) == 1:
                     applicable.append(ac)
@@ -157,18 +157,18 @@ class Planner:
                 return self.ans
 
         if tsktype == 0:                                     ##t1 compound
-            accomplaction = []
+            accomplish = []
             coun = 0
             name = name.split()
             for x in M:
                 if x.name == name and x.param == param:
-                    accomplaction.append(x)
-            if len(accomplaction) == 0:
+                    accomplish.append(x)
+            if len(accomplish) == 0:
                 return -1
             del T[0]
-            for i in range(len(accomplaction)):
+            for i in range(len(accomplish)):
                 new_tasks = []
-                new_tasks.append(accomplaction[i].subtask)
+                new_tasks.append(accomplish[i].subtask)
                 T1 = []
                 for x in new_tasks:
                     for sub in x:
@@ -178,12 +178,12 @@ class Planner:
                     T1.append(x)
                 T = T1
                 name_subtask = []
-                for s in accomplaction[i].subtask:
+                for s in accomplish[i].subtask:
                     name_subtask.append(s.name + " " + ' '.join(s.param))
-                pr = Act_for_print(2, accomplaction[i].name, accomplaction[i].param, name_subtask)
+                pr = Act_for_print(2, accomplish[i].name, accomplish[i].param, name_subtask)
                 self.ans_with_methods.append(pr)
                 htn = self.Htn_planner(pos_state, neg_state, T, O, M)
-                if htn == -1 and i == len(accomplaction) - 1:
+                if htn == -1 and i == len(accomplish) - 1:
                     return -1
                 elif htn != -1:
                     return htn
