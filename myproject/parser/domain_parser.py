@@ -437,8 +437,3 @@ class Parser:
         D = Domain(text[0][2:], self.requirement(Dom), self.types(Dom), self.predic(Dom), self.action(Dom),
                    self.task(Dom), self.method(Dom), self.precendents(Prec))
         return D
-
-
-p = Parser()
-p.domain("domain_robot.pddl", "precendents.pddl")
-#p.domain_print("domain_robot.pddl", "precendents.pddl")
